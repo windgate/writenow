@@ -18,9 +18,17 @@ const { Content } = await render(entry);
     </div>
   </div>
   <section style="padding-top:1rem;">
-    <div class="wrap prose">
-      <Content />
-      <p style="margin-top:2.5rem;"><a class="btn" href="/contact/">Start a project like this</a></p>
+    <div class={entry.data.image ? 'wrap about-grid' : 'wrap'}>
+      <div class="prose">
+        <Content />
+        <p style="margin-top:2.5rem;"><a class="btn" href="/contact/">Start a project like this</a></p>
+      </div>
+      {entry.data.image && (
+        <figure class="portrait">
+          <img src={entry.data.image} alt={entry.data.imageAlt ?? entry.data.title} loading="lazy" />
+          <figcaption class="eyebrow">{entry.data.service} · {entry.data.year}</figcaption>
+        </figure>
+      )}
     </div>
   </section>
 </Base>

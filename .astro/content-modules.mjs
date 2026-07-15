@@ -10,5 +10,6 @@ export default new Map([
 ["src/content/posts/what-a-source-list-is-for.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2Fwhat-a-source-list-is-for.mdoc&astroContentModuleFlag=true")],
 ["src/content/services/substack-newsletters.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fsubstack-newsletters.mdoc&astroContentModuleFlag=true")],
 ["src/content/successes/the-mill-family-history.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fthe-mill-family-history.mdoc&astroContentModuleFlag=true")],
-["src/content/successes/saas-whitepaper-series.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fsaas-whitepaper-series.mdoc&astroContentModuleFlag=true")]]);
+["src/content/successes/saas-whitepaper-series.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fsaas-whitepaper-series.mdoc&astroContentModuleFlag=true")],
+["src/content/successes/gunns-in-america.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fgunns-in-america.mdoc&astroContentModuleFlag=true")]]);
 		

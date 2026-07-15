@@ -20,6 +20,8 @@ const successes = defineCollection({
     year: z.string(),
     outcome: z.string(),
     featured: z.boolean().default(false),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
   }),
 });
 

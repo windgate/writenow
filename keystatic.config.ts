@@ -38,6 +38,12 @@ export default config({
         year: fields.text({ label: 'Year' }),
         outcome: fields.text({ label: 'Outcome in one line', multiline: true }),
         featured: fields.checkbox({ label: 'Feature on homepage' }),
+        image: fields.image({
+          label: 'Image (book cover, deliverable, document)',
+          directory: 'public/images/successes',
+          publicPath: '/images/successes/',
+        }),
+        imageAlt: fields.text({ label: 'Image description (for accessibility)' }),
         body: fields.markdoc({ label: 'Case study' }),
       },
     }),
