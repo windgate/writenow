@@ -1,0 +1,201 @@
+/* WriteNow Media — design tokens
+   Direction: "the working archive" — ink, paper, sealing wax.
+   Display: Newsreader (editorial serif). Body: Archivo. Labels: IBM Plex Mono. */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --ink: #23262d;
+  --paper: #f7f5f0;
+  --accent: #b5121b;
+  --accent-bright: #ed1c24;
+  --ledger: #3d5a4c;
+  --graphite: #6b6e76;
+  --rule: #d8d4ca;
+
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-body: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --measure: 64ch;
+  --space: clamp(1rem, 2.5vw, 2rem);
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+h3 { font-size: 1.25rem; }
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.wrap { max-width: 72rem; margin-inline: auto; padding-inline: var(--space); }
+
+/* Mono catalog label — the site's recurring archival cue */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--graphite);
+}
+
+/* Editorial underline — signature stroke under key phrases */
+.marked {
+  background-image: linear-gradient(var(--accent-bright), var(--accent-bright));
+  background-size: 100% 3px;
+  background-position: 0 96%;
+  background-repeat: no-repeat;
+  padding-bottom: 2px;
+}
+
+/* Header / footer */
+header.site {
+  border-bottom: 1px solid var(--rule);
+  padding-block: 1.1rem;
+}
+header.site nav { display: flex; gap: 1.5rem; align-items: baseline; flex-wrap: wrap; }
+header.site .logo {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+header.site .logo em { color: var(--accent); font-style: italic; }
+header.site a:not(.logo) {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+header.site a:not(.logo):hover { color: var(--accent); }
+
+footer.site {
+  border-top: 1px solid var(--rule);
+  margin-top: 5rem;
+  padding-block: 2.5rem;
+  color: var(--graphite);
+  font-size: 0.9rem;
+}
+
+/* Hero */
+.hero { padding-block: clamp(4rem, 10vw, 7.5rem) clamp(3rem, 7vw, 5rem); }
+.hero h1 { max-width: 18ch; }
+.hero p.lede {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  max-width: 46ch;
+  margin-top: 1.4rem;
+  color: #3a3d44;
+}
+.hero .eyebrow { display: block; margin-bottom: 1.2rem; }
+
+/* Table-of-contents style service list */
+.toc { border-top: 1px solid var(--rule); }
+.toc-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding-block: 1.35rem;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: var(--ink);
+}
+.toc-row h3 { font-size: clamp(1.2rem, 2.4vw, 1.6rem); transition: color .15s; }
+.toc-row:hover h3 { color: var(--accent); }
+.toc-row .tagline { color: var(--graphite); font-size: 0.95rem; margin-top: .2rem; }
+.toc-row .go { font-family: var(--font-mono); font-size: .8rem; color: var(--graphite); }
+
+/* Catalog cards — successes */
+.card-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); }
+.catalog-card {
+  background: #fffdf9;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent-bright);
+  padding: 1.4rem 1.5rem 1.6rem;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+.catalog-card:hover { border-color: var(--ink); border-top-color: var(--accent); }
+.catalog-card dl {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .25rem .8rem;
+  color: var(--graphite);
+}
+.catalog-card dt { letter-spacing: .12em; }
+.catalog-card dd { color: var(--ink); }
+.catalog-card .outcome { font-size: .95rem; color: #3a3d44; }
+
+section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+section > .wrap > h2 { margin-bottom: 1.8rem; }
+
+.prose { max-width: var(--measure); }
+.prose p + p, .prose ul, .prose ol { margin-top: 1em; }
+.prose h2, .prose h3 { margin-top: 1.6em; margin-bottom: .5em; }
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  padding: .85rem 1.5rem;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+}
+.btn:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--ink); color: var(--paper); }
+
+.deliverables { list-style: none; padding: 0; margin-top: 1rem; }
+.deliverables li {
+  padding: .5rem 0 .5rem 1.4rem;
+  border-bottom: 1px dashed var(--rule);
+  position: relative;
+  font-size: .95rem;
+}
+.deliverables li::before {
+  content: '›';
+  position: absolute; left: 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 40rem) {
+  .toc-row { grid-template-columns: 1fr; }
+  .toc-row .go { display: none; }
+}

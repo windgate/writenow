@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Contact" description="Start a research or writing project with WriteNow Media.">
+  <div class="hero" style="padding-bottom:2rem;">
+    <div class="wrap">
+      <span class="eyebrow">Contact</span>
+      <h1>Tell us about <span class="marked">the project</span>.</h1>
+      <p class="lede">A few lines is enough. You'll hear back within two business days.</p>
+    </div>
+  </div>
+  <section style="padding-top:1rem;">
+    <div class="wrap prose">
+      <!-- Netlify Forms: works automatically when deployed to Netlify.
+           On Cloudflare Pages, swap for a Worker or a service like Formspree. -->
+      <form name="contact" method="POST" data-netlify="true" style="display:grid; gap:1.1rem; max-width:36rem;">
+        <input type="hidden" name="form-name" value="contact" />
+        <label>Name<br /><input required name="name" type="text" style="width:100%; padding:.7rem; border:1px solid var(--rule); background:#fffdf9; font:inherit;" /></label>
+        <label>Email<br /><input required name="email" type="email" style="width:100%; padding:.7rem; border:1px solid var(--rule); background:#fffdf9; font:inherit;" /></label>
+        <label>Project type<br />
+          <select name="type" style="width:100%; padding:.7rem; border:1px solid var(--rule); background:#fffdf9; font:inherit;">
+            <option>Research</option>
+            <option>Business / technology writing</option>
+            <option>History / genealogy</option>
+            <option>Book or long-form project</option>
+            <option>Biography / obituary</option>
+            <option>Articles / web content</option>
+            <option>Substack / newsletter</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Tell us about it<br /><textarea required name="message" rows="6" style="width:100%; padding:.7rem; border:1px solid var(--rule); background:#fffdf9; font:inherit;"></textarea></label>
+        <div><button class="btn" type="submit">Send inquiry</button></div>
+      </form>
+      <p style="margin-top:2rem; color:var(--graphite);">Prefer email? <a href="mailto:hello@writenow.media">hello@writenow.media</a></p>
+    </div>
+  </section>
+</Base>

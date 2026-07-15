@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+const steps = [
+  { name: 'Discovery', text: 'A conversation about what you need, who it is for, and what done looks like. You get a written scope and a fixed quote — no hourly meters running.' },
+  { name: 'Research', text: 'Sources are gathered, read, and verified: interviews, archives, databases, records. You get a source list, so every claim in the final piece can be traced.' },
+  { name: 'Drafting', text: 'The first draft arrives on the agreed date, with notes on the choices made and questions still open.' },
+  { name: 'Revision', text: 'Two rounds of revision are included in every project. Your comments go in; a cleaner draft comes back.' },
+  { name: 'Delivery', text: 'Final files in the formats you need — plus the research file itself, which is yours to keep.' },
+];
+---
+<Base title="Process" description="How a WriteNow Media project runs: discovery, research, drafting, revision, delivery.">
+  <div class="hero" style="padding-bottom:2rem;">
+    <div class="wrap">
+      <span class="eyebrow">Process</span>
+      <h1>Five steps, <span class="marked">no surprises</span>.</h1>
+      <p class="lede">Every project — a 600-word obituary or a 90,000-word book — runs on the same rails.</p>
+    </div>
+  </div>
+  <section style="padding-top:1rem;">
+    <div class="wrap">
+      <div class="toc">
+        {steps.map((s, i) => (
+          <div class="toc-row" style="cursor:default;">
+            <div>
+              <h3><span style="font-family:var(--font-mono); font-size:.8em; color:var(--oxblood); margin-right:.6em;">{String(i + 1).padStart(2, '0')}</span>{s.name}</h3>
+              <p class="tagline" style="max-width:60ch;">{s.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="prose" style="margin-top:3rem;">
+        <h2>Questions people ask</h2>
+        <h3>How is pricing set?</h3>
+        <p>By project, not by hour. After discovery you receive a fixed quote. Books and long research engagements are billed in milestones.</p>
+        <h3>Who owns the work?</h3>
+        <p>You do, on final payment. Ghostwritten work carries your name; confidentiality is standard in every contract.</p>
+        <h3>What about my family's private records?</h3>
+        <p>Genealogy and biography clients share sensitive material. It is stored securely, used only for your project, and returned or destroyed at your instruction.</p>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const successes = (await getCollection('successes')).sort((a, b) => b.data.year.localeCompare(a.data.year));
+---
+<Base title="Successes" description="Case studies: books published, histories recovered, businesses explained.">
+  <div class="hero" style="padding-bottom:2rem;">
+    <div class="wrap">
+      <span class="eyebrow">The files</span>
+      <h1>Work that <span class="marked">shipped</span>.</h1>
+      <p class="lede">A catalog of projects delivered — each with the client, the brief, and what happened next.</p>
+    </div>
+  </div>
+  <section style="padding-top:1rem;">
+    <div class="wrap">
+      <div class="card-grid">
+        {successes.map(s => (
+          <a class="catalog-card" href={`/successes/${s.id}/`}>
+            <h3>{s.data.title}</h3>
+            <dl>
+              <dt>CLIENT</dt><dd>{s.data.client}</dd>
+              <dt>SERVICE</dt><dd>{s.data.service}</dd>
+              <dt>YEAR</dt><dd>{s.data.year}</dd>
+            </dl>
+            <p class="outcome">{s.data.outcome}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

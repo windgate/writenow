@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+---
+<Base title="Services" description="Research, business and technology writing, history and genealogy, books, biographies, web content, and Substack strategy.">
+  <div class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Services</span>
+      <h1>Writing built on <span class="marked">evidence</span>.</h1>
+      <p class="lede">Every engagement starts with research. What comes out the other side depends on what you need.</p>
+    </div>
+  </div>
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="toc">
+        {services.map(s => (
+          <a class="toc-row" href={`/services/${s.id}/`}>
+            <div>
+              <h3>{s.data.title}</h3>
+              <p class="tagline">{s.data.tagline}</p>
+            </div>
+            <span class="go">READ →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

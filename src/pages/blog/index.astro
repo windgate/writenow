@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('posts')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<Base title="Notes" description="Notes on research, writing craft, and stories from the archive.">
+  <div class="hero" style="padding-bottom:2rem;">
+    <div class="wrap">
+      <span class="eyebrow">Notes</span>
+      <h1>Marginalia.</h1>
+      <p class="lede">Short notes on research, writing craft, and things found in the archive.</p>
+    </div>
+  </div>
+  <section style="padding-top:1rem;">
+    <div class="wrap">
+      <div class="toc">
+        {posts.map(p => (
+          <a class="toc-row" href={`/blog/${p.id}/`}>
+            <div>
+              <h3>{p.data.title}</h3>
+              <p class="tagline">{p.data.excerpt}</p>
+            </div>
+            <span class="go">{p.data.pubDate.toISOString().slice(0, 10)}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
