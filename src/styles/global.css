@@ -199,3 +199,41 @@ section > .wrap > h2 { margin-bottom: 1.8rem; }
   .toc-row { grid-template-columns: 1fr; }
   .toc-row .go { display: none; }
 }
+
+/* Archival plates — full-width images with catalog captions */
+.plate { margin: 0; }
+.plate img {
+  display: block;
+  width: 100%;
+  height: clamp(14rem, 30vw, 24rem);
+  object-fit: cover;
+  border-block: 1px solid var(--rule);
+}
+.plate figcaption {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: .7rem var(--space) 0;
+}
+
+/* Dark image band with overlaid copy (typewriter CTA) */
+.band-dark {
+  background-size: cover;
+  background-position: right center;
+  position: relative;
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+}
+.band-dark::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(24,20,18,.88) 0%, rgba(24,20,18,.55) 55%, rgba(24,20,18,.15) 100%);
+}
+.band-dark .wrap { position: relative; }
+.band-copy { max-width: 34rem; color: #f3efe7; }
+.band-copy h2 { color: #fff; margin-top: .6rem; }
+.band-copy p { margin-top: 1rem; color: #d9d3c7; }
+.btn.light { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.btn.light:hover { background: var(--accent-bright); border-color: var(--accent-bright); color: #fff; }
+
+@media (max-width: 40rem) {
+  .band-dark { background-position: 78% center; }
+}

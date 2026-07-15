@@ -22,6 +22,11 @@ const featured = (await getCollection('successes')).filter(s => s.data.featured)
     </div>
   </div>
 
+  <figure class="plate">
+    <img src="/images/penpoint.jpg" alt="A fountain pen nib touching handwritten script on ruled paper" width="1920" height="550" loading="eager" />
+    <figcaption class="eyebrow">PLATE I · THE INSTRUMENT</figcaption>
+  </figure>
+
   <section>
     <div class="wrap">
       <h2>What we write</h2>
@@ -60,14 +65,17 @@ const featured = (await getCollection('successes')).filter(s => s.data.featured)
     </section>
   )}
 
-  <section>
-    <div class="wrap prose">
-      <h2>The newsletter</h2>
-      <p>
-        Research finds, writing craft, and stories rescued from the archive —
-        delivered by Substack. One good letter, no noise.
-      </p>
-      <p style="margin-top:1.4rem;"><a class="btn ghost" href="https://writenow.substack.com" rel="noopener">Subscribe on Substack</a></p>
+  <section class="band-dark" style="background-image:url('/images/typewriter.jpg');">
+    <div class="wrap">
+      <div class="band-copy">
+        <span class="eyebrow" style="color:#b9b2a6;">The newsletter</span>
+        <h2>One good letter, no noise.</h2>
+        <p>
+          Research finds, writing craft, and stories rescued from the archive —
+          delivered by Substack.
+        </p>
+        <p style="margin-top:1.6rem;"><a class="btn light" href="https://writenow.substack.com" rel="noopener">Subscribe on Substack</a></p>
+      </div>
     </div>
   </section>
 </Base>
