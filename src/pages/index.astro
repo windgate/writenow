@@ -6,26 +6,21 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
 const featured = (await getCollection('successes')).filter(s => s.data.featured).slice(0, 3);
 ---
 <Base title="Research-driven writing">
-  <div class="hero">
+  <div class="hero hero-banner" style="background-image:url('/images/penpoint.jpg');">
     <div class="wrap">
       <span class="eyebrow">Research · Writing · Publishing</span>
       <h1>Every good story begins with <span class="marked">the record</span>.</h1>
       <p class="lede">
-        WriteNow Media turns careful research into clear writing — for companies
+        WriteNow.Media turns careful research into clear writing — for companies
         explaining what they build, for families preserving where they came from,
         and for anyone with a book that deserves to exist.
       </p>
       <p style="margin-top:2.2rem; display:flex; gap:1rem; flex-wrap:wrap;">
-        <a class="btn" href="/contact/">Start a project</a>
-        <a class="btn ghost" href="/successes/">See the work</a>
+        <a class="btn light" href="/contact/">Start a project</a>
+        <a class="btn ghost-light" href="/successes/">See the work</a>
       </p>
     </div>
   </div>
-
-  <figure class="plate">
-    <img src="/images/penpoint.jpg" alt="A fountain pen nib touching handwritten script on ruled paper" width="1920" height="550" loading="eager" />
-    <figcaption class="eyebrow">PLATE I · THE INSTRUMENT</figcaption>
-  </figure>
 
   <section>
     <div class="wrap">

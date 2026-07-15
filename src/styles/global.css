@@ -237,3 +237,28 @@ section > .wrap > h2 { margin-bottom: 1.8rem; }
 @media (max-width: 40rem) {
   .band-dark { background-position: 78% center; }
 }
+
+/* Homepage hero banner — white text over the pen nib image */
+.hero-banner {
+  background-size: cover;
+  /* keep the nib (center of frame) in view */
+  background-position: center 40%;
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-banner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(22,19,16,.82) 0%, rgba(22,19,16,.55) 48%, rgba(22,19,16,.18) 100%);
+}
+.hero-banner .wrap { position: relative; }
+.hero-banner .eyebrow { color: #cfc8bb; }
+.hero-banner h1 { color: #fff; }
+.hero-banner p.lede { color: #e8e2d6; }
+.btn.ghost-light { background: transparent; color: #fff; border-color: #fff; }
+.btn.ghost-light:hover { background: #fff; color: var(--ink); }
+
+@media (max-width: 48rem) {
+  /* on narrow screens, favor the nib over the shadow side */
+  .hero-banner { background-position: 42% center; }
+}

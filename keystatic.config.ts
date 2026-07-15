@@ -7,7 +7,7 @@ export default config({
     kind: 'local',
   },
   ui: {
-    brand: { name: 'WriteNow Media' },
+    brand: { name: 'WriteNow.Media' },
   },
   collections: {
     services: collection({
