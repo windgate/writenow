@@ -29,6 +29,12 @@
         "imageAlt": {
           "type": "string"
         },
+        "link": {
+          "type": "string"
+        },
+        "linkLabel": {
+          "type": "string"
+        },
         "$schema": {
           "type": "string"
         }

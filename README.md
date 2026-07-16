@@ -39,4 +39,3 @@ site rebuilds — no database, no server to maintain.
 - Add analytics (Plausible/Fathom — one script tag in `src/layouts/Base.astro`)
 - Optional: Cal.com booking embed on `/contact`
 - Add OG image at `public/og.png`
-# writenow

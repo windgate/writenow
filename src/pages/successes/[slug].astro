@@ -21,7 +21,12 @@ const { Content } = await render(entry);
     <div class={entry.data.image ? 'wrap about-grid' : 'wrap'}>
       <div class="prose">
         <Content />
-        <p style="margin-top:2.5rem;"><a class="btn" href="/contact/">Start a project like this</a></p>
+        <p style="margin-top:2.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          {entry.data.link && (
+            <a class="btn" href={entry.data.link} rel="noopener">{entry.data.linkLabel ?? 'Learn more'}</a>
+          )}
+          <a class={entry.data.link ? 'btn ghost' : 'btn'} href="/contact/">Start a project like this</a>
+        </p>
       </div>
       {entry.data.image && (
         <figure class="portrait">

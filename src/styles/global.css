@@ -290,3 +290,15 @@ section > .wrap > h2 { margin-bottom: 1.8rem; }
 
 /* Short banner strip variant of the plate */
 .plate.strip img { height: clamp(8rem, 16vw, 12rem); }
+
+/* Section break renders as extra space, no line */
+.prose hr { border: none; height: 0; margin: 1.5em 0; }
+
+/* Quoted excerpts in long-form text */
+.prose blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--accent);
+  color: #4a4d55;
+}
+.prose blockquote p { font-family: var(--font-display); font-size: 1.1em; }

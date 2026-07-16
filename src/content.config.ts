@@ -8,6 +8,7 @@ const services = defineCollection({
     tagline: z.string(),
     order: z.number().default(10),
     deliverables: z.array(z.string()).default([]),
+    banner: z.string().optional(),
   }),
 });
 
@@ -22,6 +23,8 @@ const successes = defineCollection({
     featured: z.boolean().default(false),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
+    link: z.string().optional(),
+    linkLabel: z.string().optional(),
   }),
 });
 

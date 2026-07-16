@@ -21,6 +21,9 @@
           },
           "default": []
         },
+        "banner": {
+          "type": "string"
+        },
         "$schema": {
           "type": "string"
         }
