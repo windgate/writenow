@@ -262,3 +262,31 @@ section > .wrap > h2 { margin-bottom: 1.8rem; }
   /* on narrow screens, favor the nib over the shadow side */
   .hero-banner { background-position: 42% center; }
 }
+
+/* About page — bio beside engraved portrait */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 24rem);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+.portrait { margin: 0; }
+.portrait img {
+  display: block;
+  max-width: 100%;
+  margin-inline: auto;
+  height: auto;
+  border: 1px solid var(--rule);
+  background: #fffdf9;
+  padding: 10px;           /* mat around the engraving, like a mounted print */
+  box-shadow: 0 2px 10px rgba(35, 38, 45, .07);
+}
+.portrait figcaption { margin-top: .8rem; text-align: center; }
+
+@media (max-width: 52rem) {
+  .about-grid { grid-template-columns: 1fr; }
+  .portrait { max-width: 22rem; }
+}
+
+/* Short banner strip variant of the plate */
+.plate.strip img { height: clamp(8rem, 16vw, 12rem); }
