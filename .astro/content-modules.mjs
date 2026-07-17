@@ -1,16 +1,17 @@
 
 export default new Map([
 ["src/content/services/business-technology-writing.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fbusiness-technology-writing.mdoc&astroContentModuleFlag=true")],
-["src/content/services/biographies-obituaries.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fbiographies-obituaries.mdoc&astroContentModuleFlag=true")],
-["src/content/services/articles-web-content.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Farticles-web-content.mdoc&astroContentModuleFlag=true")],
-["src/content/services/books-long-form.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fbooks-long-form.mdoc&astroContentModuleFlag=true")],
-["src/content/successes/field-trail-guide-roosevelt.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Ffield-trail-guide-roosevelt.mdoc&astroContentModuleFlag=true")],
-["src/content/services/research.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fresearch.mdoc&astroContentModuleFlag=true")],
 ["src/content/services/history-genealogy.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fhistory-genealogy.mdoc&astroContentModuleFlag=true")],
+["src/content/services/books-long-form.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fbooks-long-form.mdoc&astroContentModuleFlag=true")],
+["src/content/services/articles-web-content.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Farticles-web-content.mdoc&astroContentModuleFlag=true")],
+["src/content/services/biographies-obituaries.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fbiographies-obituaries.mdoc&astroContentModuleFlag=true")],
+["src/content/services/research.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fresearch.mdoc&astroContentModuleFlag=true")],
 ["src/content/services/substack-newsletters.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fservices%2Fsubstack-newsletters.mdoc&astroContentModuleFlag=true")],
+["src/content/successes/field-trail-guide-roosevelt.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Ffield-trail-guide-roosevelt.mdoc&astroContentModuleFlag=true")],
+["src/content/successes/five-days-apart.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Ffive-days-apart.mdoc&astroContentModuleFlag=true")],
+["src/content/successes/gunns-in-america.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fgunns-in-america.mdoc&astroContentModuleFlag=true")],
+["src/content/successes/memoir-project.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fmemoir-project.mdoc&astroContentModuleFlag=true")],
 ["src/content/successes/saas-whitepaper-series.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fsaas-whitepaper-series.mdoc&astroContentModuleFlag=true")],
 ["src/content/posts/what-a-source-list-is-for.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2Fwhat-a-source-list-is-for.mdoc&astroContentModuleFlag=true")],
-["src/content/successes/five-days-apart.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Ffive-days-apart.mdoc&astroContentModuleFlag=true")],
-["src/content/successes/memoir-project.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fmemoir-project.mdoc&astroContentModuleFlag=true")],
-["src/content/successes/gunns-in-america.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fgunns-in-america.mdoc&astroContentModuleFlag=true")]]);
+["src/content/successes/memorials-legacy-media.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fsuccesses%2Fmemorials-legacy-media.mdoc&astroContentModuleFlag=true")]]);
 		
